@@ -136,6 +136,7 @@ namespace Minesweeper_Client
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
+            Connect();
             if(String.Compare(txt_NewPass.Text, txt_ReType.Text, false) != 0)
             {
                 label_tb.Text = "Mật khẩu không khớp xin vui lòng nhập lại !!!";

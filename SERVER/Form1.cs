@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace SERVER
 {
@@ -346,6 +347,99 @@ namespace SERVER
                         }
                         client.Send(Serialize(str));
                         sqlDataReader.Close();
+                    }
+
+                    if (message[message.Length - 1] == "GetRank")
+                    {
+                        if (message[0] == "Beginner")
+                        {
+                            List<string> name = new List<string>();
+                            List<string> score = new List<string>();
+                            String str = "";
+                            string query = "select username, max(score) from User_Score where mode = 'beginner' group by username order by max(score) desc";
+                            sqlCommand = new SqlCommand(query, conn);
+                            sqlDataReader = sqlCommand.ExecuteReader();
+                            while (sqlDataReader.Read())
+                            {
+                                var nam = sqlDataReader.GetString(0);
+                                var scor = sqlDataReader.GetInt32(1).ToString();
+                                name.Add(nam);
+                                score.Add(scor);
+                            }
+                            for(int i = 0; i < name.Count; i++)
+                            {
+                                if(i == name.Count - 1)
+                                {
+                                    str += name[i] + "-" + score[i] + "-" + "GetBeginner";
+                                }
+                                else
+                                {
+                                    str += name[i] + "-" + score[i] + "-";
+                                }
+                            }
+                            client.Send(Serialize(str));
+                            sqlDataReader.Close();
+                        }
+
+                        if (message[0] == "Intermediate")
+                        {
+                            List<string> name = new List<string>();
+                            List<string> score = new List<string>();
+                            String str = "";
+                            string query = "select username, max(score) from User_Score where mode = 'medium' group by username order by max(score) desc";
+                            sqlCommand = new SqlCommand(query, conn);
+                            sqlDataReader = sqlCommand.ExecuteReader();
+                            while (sqlDataReader.Read())
+                            {
+                                var nam = sqlDataReader.GetString(0);
+                                var scor = sqlDataReader.GetInt32(1).ToString();
+                                name.Add(nam);
+                                score.Add(scor);
+                            }
+                            for (int i = 0; i < name.Count; i++)
+                            {                    
+                                if (i == name.Count - 1)
+                                {
+                                    str += name[i] + "-" + score[i] + "-" + "GetIntermediate";
+                                }
+                                else
+                                {
+                                    str += name[i] + "-" + score[i] + "-";
+                                }
+                            }                
+                            client.Send(Serialize(str));
+                            sqlDataReader.Close();
+                        }
+
+                        if (message[0] == "Expert")
+                        {
+                            List<string> name = new List<string>();
+                            List<string> score = new List<string>();
+                            String str = "";
+                            string query = "select username, max(score) from User_Score where mode = 'expert' group by username order by max(score) desc";
+                            sqlCommand = new SqlCommand(query, conn);
+                            sqlDataReader = sqlCommand.ExecuteReader();
+                            while (sqlDataReader.Read())
+                            {
+                                var nam = sqlDataReader.GetString(0);
+                                var scor = sqlDataReader.GetInt32(1).ToString();
+                                name.Add(nam);
+                                score.Add(scor);
+                            }
+                            for (int i = 0; i < name.Count; i++)
+                            {
+                                if (i == name.Count - 1)
+                                {
+                                    str += name[i] + "-" + score[i] + "-" + "GetExpert";
+                                }
+                                else
+                                {
+                                    str += name[i] + "-" + score[i] + "-";
+                                }
+                            }
+                            client.Send(Serialize(str));
+                            sqlDataReader.Close();
+                        }
                     }
                 }
             }

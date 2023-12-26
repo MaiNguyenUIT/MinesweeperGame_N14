@@ -425,7 +425,7 @@
             this.MinimizeBox = false;
             this.Name = "MineLand";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Y2 MineLand";
+            this.Text = "MineLand";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_PasswordChanged_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

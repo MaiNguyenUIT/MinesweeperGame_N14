@@ -171,6 +171,7 @@ namespace Minesweeper_Client
 
         private void tao_ingame_Click(object sender, EventArgs e)
         {
+            Connect();
             Send();
         }
     }

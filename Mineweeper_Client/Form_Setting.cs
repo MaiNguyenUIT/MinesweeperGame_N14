@@ -34,11 +34,6 @@ namespace Minesweeper_Client
             form_PasswordChanged.ShowDialog();
         }
 
-        private void btn_ResetName_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form_NameChanged form = new Form_NameChanged();
-            form.ShowDialog();
-        }
+        
     }
 }

@@ -147,13 +147,15 @@ namespace Minesweeper_Client
         private void btn_Login_Click(object sender, EventArgs e)
         {           
             Send();
+            Connect();
             Form_PasswordChanged.tk = tbx_Account.Text;
             Form_PasswordChanged.mk = tbx_Password.Text;
             Form_CreateGameCharacter.taikhoan = tbx_Account.Text;
             Form_CreateGameCharacter.matkhau = tbx_Password.Text;
             MainForm.tk = tbx_Account.Text;
             MainForm.mk = tbx_Password.Text;
-            MineLand.tk = tbx_Account.Text;
+            Form_Ranked.tk = tbx_Account.Text;
+            Form_Ranked.mk = tbx_Password.Text;
         }
 
         private void btn_Signup_Click(object sender, EventArgs e)

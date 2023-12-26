@@ -144,6 +144,7 @@ namespace Minesweeper_Client
 
         private void btn_Signup_Click(object sender, EventArgs e)
         {
+            Connect();
             if (checkAccount(tbx_TTK.Text) != true)
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản dài từ 6-24 kí tự bao, với các kí tự thường, in hoa, số");

@@ -223,6 +223,16 @@ namespace Minesweeper_Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rankedPic {
+            get {
+                object obj = ResourceManager.GetObject("rankedPic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap signout_icon {
             get {
                 object obj = ResourceManager.GetObject("signout_icon", resourceCulture);

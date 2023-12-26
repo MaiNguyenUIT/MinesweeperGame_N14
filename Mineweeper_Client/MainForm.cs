@@ -21,7 +21,6 @@ namespace Minesweeper_Client
         public string mode = "";
         public static string tk = "";
         public static string mk = "";
-        int attempt;
         public MainForm()
         {
             InitializeComponent();
@@ -129,6 +128,7 @@ namespace Minesweeper_Client
                     {
                         lblName.Text = message[1];
                         lbl_ID.Text = message[0].ToString();
+                        MineLand.username = lblName.Text;
                     }
                 }
             }
@@ -265,7 +265,24 @@ namespace Minesweeper_Client
         private void btn_Reset_Click(object sender, EventArgs e)
         {
             Connect();
+            listView1.Items.Clear();
             SendToGetData();
+        }
+
+        private void picB_Ranked_Click(object sender, EventArgs e)
+        {
+            Form_Ranked form = new Form_Ranked();
+            form.ShowDialog();
+        }
+
+        private void picB_Ranked_MouseEnter(object sender, EventArgs e)
+        {
+            picB_Ranked.BackColor = Color.PaleGoldenrod;
+        }
+
+        private void picB_Ranked_MouseLeave(object sender, EventArgs e)
+        {
+            picB_Ranked.BackColor= Color.Transparent;
         }
     }
 }

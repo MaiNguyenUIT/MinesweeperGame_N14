@@ -96,6 +96,9 @@
     <Compile Include="CustomForm.Designer.cs">
       <DependentUpon>CustomForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseOfMineSweeperDataSet.cs">
+      <DependentUpon>DatabaseOfMineSweeperDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseOfMineSweeperDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,17 +110,17 @@
     <Compile Include="Form_CreateGameCharacter.Designer.cs">
       <DependentUpon>Form_CreateGameCharacter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_NameChanged.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_NameChanged.Designer.cs">
-      <DependentUpon>Form_NameChanged.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_PasswordChanged.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_PasswordChanged.Designer.cs">
       <DependentUpon>Form_PasswordChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Ranked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ranked.Designer.cs">
+      <DependentUpon>Form_Ranked.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Setting.cs">
       <SubType>Form</SubType>
@@ -171,11 +174,11 @@
     <EmbeddedResource Include="Form_CreateGameCharacter.resx">
       <DependentUpon>Form_CreateGameCharacter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_NameChanged.resx">
-      <DependentUpon>Form_NameChanged.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_PasswordChanged.resx">
       <DependentUpon>Form_PasswordChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ranked.resx">
+      <DependentUpon>Form_Ranked.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Setting.resx">
       <DependentUpon>Form_Setting.cs</DependentUpon>
@@ -257,6 +260,7 @@
   <ItemGroup>
     <Content Include="1295700221_clanbomber.ico" />
     <Content Include="1295743174_kmines.ico" />
+    <None Include="Resources\rankedPic.png" />
     <None Include="Resources\newnamegif.gif" />
     <None Include="Resources\signout_icon.png" />
     <None Include="Resources\passchangedgif.gif" />

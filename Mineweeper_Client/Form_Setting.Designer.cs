@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btn_Changepass = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.btn_ResetName = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.chkbx_Sound = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btn_Cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -41,7 +40,7 @@
             // 
             // btn_Changepass
             // 
-            this.btn_Changepass.Location = new System.Drawing.Point(59, 122);
+            this.btn_Changepass.Location = new System.Drawing.Point(59, 141);
             this.btn_Changepass.Name = "btn_Changepass";
             this.btn_Changepass.Palette = this.kryptonPalette1;
             this.btn_Changepass.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -58,17 +57,6 @@
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Border.Rounding = 15;
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Border.Width = 3;
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btn_ResetName
-            // 
-            this.btn_ResetName.Location = new System.Drawing.Point(59, 199);
-            this.btn_ResetName.Name = "btn_ResetName";
-            this.btn_ResetName.Palette = this.kryptonPalette1;
-            this.btn_ResetName.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.btn_ResetName.Size = new System.Drawing.Size(220, 45);
-            this.btn_ResetName.TabIndex = 1;
-            this.btn_ResetName.Values.Text = "Change Name";
-            this.btn_ResetName.Click += new System.EventHandler(this.btn_ResetName_Click);
             // 
             // chkbx_Sound
             // 
@@ -92,7 +80,7 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(59, 274);
+            this.btn_Cancel.Location = new System.Drawing.Point(59, 239);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Palette = this.kryptonPalette1;
             this.btn_Cancel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -109,7 +97,6 @@
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.btn_Changepass);
-            this.Controls.Add(this.btn_ResetName);
             this.Name = "Form_Setting";
             this.Text = "Form_Setting";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
@@ -121,7 +108,6 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_Changepass;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_ResetName;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkbx_Sound;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;

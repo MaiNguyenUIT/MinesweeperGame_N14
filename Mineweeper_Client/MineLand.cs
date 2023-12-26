@@ -20,11 +20,9 @@ namespace Minesweeper_Client
     {
         TimeSpan seconds;
         public string mode = "";
-        public static string tk = "";
+        public static string username = "";
         int attempt = 0;
-
-        
-
+     
         public MineLand()
         {
             InitializeComponent();
@@ -77,13 +75,13 @@ namespace Minesweeper_Client
         void SendToGetAttempt()
         {
             //nếu textbox khác rỗng thì mới gửi tin
-            string str = tk + "-" + "KtraAttempt";
+            string str = username + "-" + "KtraAttempt";
             client.Send(Serialize(str));
         }
 
         void SendToAddScore()
         {
-            string str = tk + "-" + (attempt + 1).ToString() + "-" + mode + "-" + lblScores.Text + "-" + lblTime.Text + "-" + "AddScore";
+            string str = username + "-" + (attempt + 1).ToString() + "-" + mode + "-" + lblScores.Text + "-" + lblTime.Text + "-" + "AddScore";
             client.Send(Serialize(str));
         }
 
