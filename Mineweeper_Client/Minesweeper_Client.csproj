@@ -96,19 +96,23 @@
     <Compile Include="CustomForm.Designer.cs">
       <DependentUpon>CustomForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseOfMineSweeperDataSet.cs">
-      <DependentUpon>DatabaseOfMineSweeperDataSet.xsd</DependentUpon>
+    <Compile Include="Form_Chat.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseOfMineSweeperDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseOfMineSweeperDataSet.xsd</DependentUpon>
+    <Compile Include="Form_Chat.Designer.cs">
+      <DependentUpon>Form_Chat.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_CreateGameCharacter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_CreateGameCharacter.Designer.cs">
       <DependentUpon>Form_CreateGameCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Notification.Designer.cs">
+      <DependentUpon>Form_Notification.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_PasswordChanged.cs">
       <SubType>Form</SubType>
@@ -174,6 +178,9 @@
     <EmbeddedResource Include="Form_CreateGameCharacter.resx">
       <DependentUpon>Form_CreateGameCharacter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Notification.resx">
+      <DependentUpon>Form_Notification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_PasswordChanged.resx">
       <DependentUpon>Form_PasswordChanged.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,17 +221,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="DatabaseOfMineSweeperDataSet.xsc">
-      <DependentUpon>DatabaseOfMineSweeperDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseOfMineSweeperDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseOfMineSweeperDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseOfMineSweeperDataSet.xss">
-      <DependentUpon>DatabaseOfMineSweeperDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -260,6 +256,10 @@
   <ItemGroup>
     <Content Include="1295700221_clanbomber.ico" />
     <Content Include="1295743174_kmines.ico" />
+    <None Include="Resources\reload-icon-16912.png" />
+    <None Include="Resources\OIP.jpg" />
+    <None Include="Resources\chatPic.png" />
+    <None Include="Resources\bell_pic.png" />
     <None Include="Resources\rankedPic.png" />
     <None Include="Resources\newnamegif.gif" />
     <None Include="Resources\signout_icon.png" />

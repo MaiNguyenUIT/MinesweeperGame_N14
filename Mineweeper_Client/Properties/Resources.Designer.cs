@@ -93,9 +93,29 @@ namespace Minesweeper_Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bell_pic {
+            get {
+                object obj = ResourceManager.GetObject("bell_pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cell {
             get {
                 object obj = ResourceManager.GetObject("cell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chatPic {
+            get {
+                object obj = ResourceManager.GetObject("chatPic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +223,16 @@ namespace Minesweeper_Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OIP {
+            get {
+                object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap passchangedgif {
             get {
                 object obj = ResourceManager.GetObject("passchangedgif", resourceCulture);
@@ -226,6 +256,16 @@ namespace Minesweeper_Client.Properties {
         internal static System.Drawing.Bitmap rankedPic {
             get {
                 object obj = ResourceManager.GetObject("rankedPic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reload_icon_16912 {
+            get {
+                object obj = ResourceManager.GetObject("reload-icon-16912", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -18,26 +18,12 @@ namespace Admin
             InitializeComponent();
         }
 
-        private void pLAYERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pLAYERBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.databaseOfMineSweeperDataSet);
-
-        }
-
-        private void Admin_Work_Form_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'databaseOfMineSweeperDataSet.PLAYER' table. You can move, or remove it, as needed.
-            this.pLAYERTableAdapter.Fill(this.databaseOfMineSweeperDataSet.PLAYER);
-
-        }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin_Work_Form_ForLogin form = new Admin_Work_Form_ForLogin();
-            form.Show();
+            Admin_Work_Form_ForElse form_ForElse = new Admin_Work_Form_ForElse();
+            form_ForElse.Show();
             this.Close();
         }
 
@@ -47,6 +33,21 @@ namespace Admin
             this.Hide();
             form.Show();
             this.Close();
+        }
+
+        private void user_InfBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.user_InfBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dOAN_LTTQDataSet);
+
+        }
+
+        private void Admin_MainWork_Form_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dOAN_LTTQDataSet.User_Inf' table. You can move, or remove it, as needed.
+            this.user_InfTableAdapter.Fill(this.dOAN_LTTQDataSet.User_Inf);
+
         }
     }
 }

@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SERVER
 {
@@ -440,6 +441,116 @@ namespace SERVER
                             client.Send(Serialize(str));
                             sqlDataReader.Close();
                         }
+                    }
+
+                    if (message[message.Length - 1] == "Addfr")
+                    {
+                        string query = "Select id from User_Inf where ingame = '" + message[1] + "'";
+                        sqlCommand = new SqlCommand(query, conn);
+                        sqlDataReader = sqlCommand.ExecuteReader();
+                        bool is_null = true;
+                        var idfr = 0;
+                        while (sqlDataReader.Read())
+                        {
+                            is_null = false;
+                            if (sqlDataReader.GetInt32(0).ToString() != null)
+                            {                               
+                                idfr = sqlDataReader.GetInt32(0);
+                            }
+                        }
+                        if(is_null == true)
+                        {
+                            string str = "User khong ton tai";
+                            client.Send(Serialize(str));
+                            break;
+                        }
+                        sqlDataReader.Close();
+                        string query_1 = @"Insert into User_Friend values ( '" + message[1] + "','" + message[0] + "','" + "wait" + "'," + message[2] + ")";
+                        string query_2 = @"Insert into User_Friend values ( '" + message[0] + "','" + message[1] + "','" + "wait" + "'," + idfr.ToString() + ")";
+                        SqlCommand sqlCommand2 = new SqlCommand(query_1, conn);
+                        SqlCommand sqlCommand1 = new SqlCommand(query_2, conn);
+                        sqlCommand2.ExecuteNonQuery();
+                        sqlCommand1.ExecuteNonQuery();
+                    }
+
+                    if (message[message.Length - 1] == "GetInvitation")
+                    {
+                        List<string> invition = new List<string>();
+                        String str = "";
+                        string query = "select username_fr from User_Friend where username = '" + message[0] + "'";
+                        sqlCommand = new SqlCommand(query, conn);
+                        sqlDataReader = sqlCommand.ExecuteReader();
+                        while (sqlDataReader.Read())
+                        {
+                            var inv = sqlDataReader.GetString(0);
+                            invition.Add(inv);
+                        }
+                        for(int i = 0; i < invition.Count; i++)
+                        {
+                            if(i == invition.Count - 1)
+                            {
+                                str += invition[i];
+                            }
+                            else
+                            {
+                                str += invition[i] + "-";
+                            }
+                        }
+                        client.Send(Serialize(str));
+                        sqlDataReader.Close();
+                    }
+
+                    if (message[message.Length - 1] == "Action")
+                    {
+                        if (message[message.Length - 2] == "acp")
+                        {
+                            string query_1 = "Update User_Friend set status = '" + "done" + "' where username = '" + message[0] + "' and username_fr = '" + message[1] + "'";
+                            string query_2 = "Update User_Friend set status = '" + "done" + "' where username = '" + message[1] + "' and username_fr = '" + message[0] + "'";
+                            SqlCommand sqlCommand1 = new SqlCommand(query_1, conn);
+                            SqlCommand sqlCommand2 = new SqlCommand(query_2, conn);
+                            sqlCommand1.ExecuteNonQuery();
+                            sqlCommand2.ExecuteNonQuery();
+                        }
+
+                        if (message[message.Length - 2] == "deny")
+                        {
+                            string query_1 = "Delete from User_Friend where username = '" + message[0] + "' and username_fr = '" + message[1] + "'";
+                            string query_2 = "Delete from User_Friend where username = '" + message[1] + "' and username_fr = '" + message[0] + "'";
+                            SqlCommand sqlCommand1 = new SqlCommand(query_1, conn);
+                            SqlCommand sqlCommand2 = new SqlCommand(query_2, conn);
+                            sqlCommand1.ExecuteNonQuery();
+                            sqlCommand2.ExecuteNonQuery();
+                        }
+                    }
+
+                    if (message[message.Length - 1] == "GetFr")
+                    {
+                        List<string> username_fr = new List<string>();
+                        List<string> id_fr = new List<string>();
+                        String str = "";
+                        string query = "select distinct username_fr, id from User_Friend where username = '" + message[0] + "' and status = 'done'";
+                        sqlCommand = new SqlCommand(query, conn);
+                        sqlDataReader = sqlCommand.ExecuteReader();
+                        while (sqlDataReader.Read())
+                        {
+                            var name_fr = sqlDataReader.GetString(0);
+                            var id = sqlDataReader.GetInt32(1).ToString();
+                            username_fr.Add(name_fr);
+                            id_fr.Add(id);
+                        }
+                        for (int i = 0; i < username_fr.Count; i++)
+                        {
+                            if (i == username_fr.Count - 1)
+                            {
+                                str += username_fr[i] + "-" + id_fr[i] + "-" + "GetFr";
+                            }
+                            else
+                            {
+                                str += username_fr[i] + "-" + id_fr[i] + "-";
+                            }
+                        }
+                        client.Send(Serialize(str));
+                        sqlDataReader.Close();
                     }
                 }
             }

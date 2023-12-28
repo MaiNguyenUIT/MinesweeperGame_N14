@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Admin.DatabaseOfMineSweeperDataSetTableAdapters;
 using ComponentFactory.Krypton.Toolkit;
 
 namespace Admin

@@ -27,6 +27,8 @@ namespace Minesweeper_Client
             CheckForIllegalCrossThreadCalls = false;//tránh việc đụng độ khi sử dụng tài nguyên giữa các thread
             Connect();
             SendtoGetinf();
+            Thread.Sleep(500);
+            SendToGetFriend();
         }
 
         private void FormDangNhap_FormClosed(object sender, FormClosedEventArgs e)
@@ -88,7 +90,20 @@ namespace Minesweeper_Client
 
         void SendToGetData()
         {
-            String str = tk + "-" + "GetData";
+            String str = lblName.Text + "-" + "GetData";
+            client.Send(Serialize(str));
+        }
+
+        void SendToAddFr()
+        {
+            String str = lblName.Text + "-" + txt_FindFr.Text + "-" + lbl_ID.Text + "-" + "Addfr";
+            client.Send(Serialize(str));
+        }
+
+        void SendToGetFriend()
+        {
+            Connect();
+            String str = lblName.Text + "-" + "GetFr";
             client.Send(Serialize(str));
         }
 
@@ -103,6 +118,18 @@ namespace Minesweeper_Client
                 listViewItem.SubItems.Add(message[i + 2]);
                 listViewItem.SubItems.Add(message[i + 3]);
                 listView1.Items.Add(listViewItem);
+            }
+        }
+
+        void InsertDataIntoListViewFr(string str)
+        {
+            string[] message;
+            message = str.Split('-');
+            for (int i = 0; i < message.Length; i = i + 2)
+            {
+                ListViewItem listViewItem = new ListViewItem(message[i]);
+                listViewItem.SubItems.Add(message[i + 1]);
+                FriendList.Items.Add(listViewItem);
             }
         }
 
@@ -124,11 +151,20 @@ namespace Minesweeper_Client
                     {
                         InsertDataIntoListView(Str);
                     }
+                    else if (message[message.Length - 1] == "User khong ton tai")
+                    {
+                        MessageBox.Show("User khong ton tai");
+                    }
+                    else if (message[message.Length - 1] == "GetFr")
+                    {
+                        InsertDataIntoListViewFr(Str);
+                    }
                     else
                     {
                         lblName.Text = message[1];
                         lbl_ID.Text = message[0].ToString();
                         MineLand.username = lblName.Text;
+                        Form_Notification.username = lblName.Text;
                     }
                 }
             }
@@ -283,6 +319,53 @@ namespace Minesweeper_Client
         private void picB_Ranked_MouseLeave(object sender, EventArgs e)
         {
             picB_Ranked.BackColor= Color.Transparent;
+        }
+
+        private void picB_notification_MouseEnter(object sender, EventArgs e)
+        {
+            picB_notification.BackColor = Color.PaleGoldenrod;
+        }
+
+        private void picB_notification_MouseLeave(object sender, EventArgs e)
+        {
+            picB_notification.BackColor = Color.Transparent;
+        }
+
+        private void picB_notification_Click(object sender, EventArgs e)
+        {
+            Form_Notification form = new Form_Notification();
+            form.ShowDialog();
+        }
+
+
+        private void picB_Chat_MouseEnter(object sender, EventArgs e)
+        {
+            picB_Chat.BackColor = Color.PaleGoldenrod;
+        }
+
+        private void picB_Chat_MouseLeave(object sender, EventArgs e)
+        {
+            picB_Chat.BackColor = Color.Transparent;
+        }
+
+        private void picB_Chat_Click(object sender, EventArgs e)
+        {
+            Form_Chat form = new Form_Chat();   
+            form.ShowDialog();
+        }
+
+
+        private void btn_AddFr_Click(object sender, EventArgs e)
+        {
+            Connect();
+            SendToAddFr();
+        }
+
+        private void pic_Renew_Click(object sender, EventArgs e)
+        {
+            Connect();
+            FriendList.Items.Clear();
+            SendToGetFriend();
         }
     }
 }
