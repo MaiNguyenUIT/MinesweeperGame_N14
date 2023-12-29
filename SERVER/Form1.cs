@@ -61,8 +61,7 @@ namespace SERVER
                     while (true)
                     {
                         server.Listen(100);
-                        Socket client = server.Accept();//nếu lăng nghe thành công thì server chấp nhận kết nối
-                        clientList.Add(client);//thêm các client được server accept vào list
+                        Socket client = server.Accept();//nếu lăng nghe thành công thì server chấp nhận kết nối                       
                         //tạo luồng nhận thông tin từ client
                         Thread receive = new Thread(Receive);
                         receive.IsBackground = true;
@@ -551,6 +550,22 @@ namespace SERVER
                         }
                         client.Send(Serialize(str));
                         sqlDataReader.Close();
+                    }
+
+                    if (message[message.Length - 1] == "AddChatList")
+                    {
+                        clientList.Add(client);
+                    }
+
+                    if (message[message.Length - 1] == "Chat")
+                    {
+                        foreach (Socket item in clientList)
+                        {
+                            if (item != null && item != client)
+                            {
+                                item.Send(Serialize(message[0]));
+                            }
+                        }
                     }
                 }
             }

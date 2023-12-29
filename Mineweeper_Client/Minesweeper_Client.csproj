@@ -175,6 +175,9 @@
       <DependentUpon>CustomForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Chat.resx">
+      <DependentUpon>Form_Chat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_CreateGameCharacter.resx">
       <DependentUpon>Form_CreateGameCharacter.cs</DependentUpon>
     </EmbeddedResource>
