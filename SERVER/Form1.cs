@@ -477,7 +477,7 @@ namespace SERVER
                     {
                         List<string> invition = new List<string>();
                         String str = "";
-                        string query = "select username_fr from User_Friend where username = '" + message[0] + "'";
+                        string query = "select username_fr from User_Friend where username = '" + message[0] + "' and status = 'wait'";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         while (sqlDataReader.Read())
@@ -526,27 +526,27 @@ namespace SERVER
                     if (message[message.Length - 1] == "GetFr")
                     {
                         List<string> username_fr = new List<string>();
-                        List<string> id_fr = new List<string>();
+                        List<string> mode_fr = new List<string>();
                         String str = "";
-                        string query = "select distinct username_fr, id from User_Friend where username = '" + message[0] + "' and status = 'done'";
+                        string query = "select ingame, mode from User_Inf where ingame in ( select distinct username_fr from User_Friend where username = '" + message[0] + "' and status = 'done')";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         while (sqlDataReader.Read())
                         {
                             var name_fr = sqlDataReader.GetString(0);
-                            var id = sqlDataReader.GetInt32(1).ToString();
+                            var mode = sqlDataReader.GetString(1);
                             username_fr.Add(name_fr);
-                            id_fr.Add(id);
+                            mode_fr.Add(mode);
                         }
                         for (int i = 0; i < username_fr.Count; i++)
                         {
                             if (i == username_fr.Count - 1)
                             {
-                                str += username_fr[i] + "-" + id_fr[i] + "-" + "GetFr";
+                                str += username_fr[i] + "-" + mode_fr[i] + "-" + "GetFr";
                             }
                             else
                             {
-                                str += username_fr[i] + "-" + id_fr[i] + "-";
+                                str += username_fr[i] + "-" + mode_fr[i] + "-";
                             }
                         }
                         client.Send(Serialize(str));

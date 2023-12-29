@@ -106,6 +106,7 @@ namespace Minesweeper_Client
             String str = lblName.Text + "-" + "GetFr";
             client.Send(Serialize(str));
         }
+        
 
         void InsertDataIntoListView(string str)
         {
@@ -153,7 +154,7 @@ namespace Minesweeper_Client
                     }
                     else if (message[message.Length - 1] == "User khong ton tai")
                     {
-                        MessageBox.Show("User khong ton tai");
+                        MessageBox.Show("User không tồn tại");
                     }
                     else if (message[message.Length - 1] == "GetFr")
                     {
