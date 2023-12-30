@@ -1,4 +1,4 @@
-﻿namespace Minesweeper_Client
+namespace Minesweeper_Client
 {
     partial class Form_CreateGameCharacter
     {
@@ -53,13 +53,13 @@
             // 
             this.txt_ingame.Location = new System.Drawing.Point(24, 71);
             this.txt_ingame.Name = "txt_ingame";
-            this.txt_ingame.Size = new System.Drawing.Size(220, 30);
+            this.txt_ingame.Size = new System.Drawing.Size(220, 35);
             this.txt_ingame.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_ingame.StateCommon.Border.Rounding = 10;
             this.txt_ingame.StateCommon.Border.Width = 2;
-            this.txt_ingame.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ingame.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ingame.TabIndex = 1;
             // 
             // btn_Confirm
