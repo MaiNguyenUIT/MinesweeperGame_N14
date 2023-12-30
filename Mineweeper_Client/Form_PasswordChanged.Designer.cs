@@ -1,4 +1,4 @@
-﻿namespace Minesweeper_Client
+namespace Minesweeper_Client
 {
     partial class Form_PasswordChanged
     {
