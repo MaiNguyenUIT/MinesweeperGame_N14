@@ -1,4 +1,4 @@
-﻿namespace Minesweeper_Client
+namespace Minesweeper_Client
 {
     partial class Form_Login
     {
@@ -69,13 +69,13 @@
             // 
             this.tbx_Account.Location = new System.Drawing.Point(578, 263);
             this.tbx_Account.Name = "tbx_Account";
-            this.tbx_Account.Size = new System.Drawing.Size(180, 30);
+            this.tbx_Account.Size = new System.Drawing.Size(180, 35);
             this.tbx_Account.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.tbx_Account.StateCommon.Border.Rounding = 10;
             this.tbx_Account.StateCommon.Border.Width = 2;
-            this.tbx_Account.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Account.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_Account.TabIndex = 2;
             // 
             // lbl_Account
@@ -105,13 +105,13 @@
             this.tbx_Password.Location = new System.Drawing.Point(578, 354);
             this.tbx_Password.Name = "tbx_Password";
             this.tbx_Password.PasswordChar = '*';
-            this.tbx_Password.Size = new System.Drawing.Size(180, 30);
+            this.tbx_Password.Size = new System.Drawing.Size(180, 35);
             this.tbx_Password.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.tbx_Password.StateCommon.Border.Rounding = 10;
             this.tbx_Password.StateCommon.Border.Width = 2;
-            this.tbx_Password.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Password.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_Password.TabIndex = 8;
             // 
             // pictureBox4
