@@ -1,4 +1,4 @@
-﻿namespace Minesweeper_Client
+namespace Minesweeper_Client
 {
     partial class Form_SignUp
     {
@@ -166,69 +166,69 @@
             "Khác"});
             this.CB_Sex.Location = new System.Drawing.Point(182, 393);
             this.CB_Sex.Name = "CB_Sex";
-            this.CB_Sex.Size = new System.Drawing.Size(226, 28);
+            this.CB_Sex.Size = new System.Drawing.Size(226, 33);
             this.CB_Sex.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.CB_Sex.StateCommon.ComboBox.Border.Rounding = 10;
             this.CB_Sex.StateCommon.ComboBox.Border.Width = 2;
-            this.CB_Sex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_Sex.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_Sex.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.CB_Sex.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_Sex.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_Sex.TabIndex = 20;
             // 
             // tbx_Gmail
             // 
             this.tbx_Gmail.Location = new System.Drawing.Point(182, 352);
             this.tbx_Gmail.Name = "tbx_Gmail";
-            this.tbx_Gmail.Size = new System.Drawing.Size(226, 30);
+            this.tbx_Gmail.Size = new System.Drawing.Size(226, 35);
             this.tbx_Gmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.tbx_Gmail.StateCommon.Border.Rounding = 10;
             this.tbx_Gmail.StateCommon.Border.Width = 2;
-            this.tbx_Gmail.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_Gmail.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_Gmail.TabIndex = 19;
             // 
             // tbx_HT
             // 
             this.tbx_HT.Location = new System.Drawing.Point(182, 304);
             this.tbx_HT.Name = "tbx_HT";
-            this.tbx_HT.Size = new System.Drawing.Size(226, 30);
+            this.tbx_HT.Size = new System.Drawing.Size(226, 35);
             this.tbx_HT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.tbx_HT.StateCommon.Border.Rounding = 10;
             this.tbx_HT.StateCommon.Border.Width = 2;
-            this.tbx_HT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_HT.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_HT.TabIndex = 18;
             // 
             // tbx_MK
             // 
             this.tbx_MK.Location = new System.Drawing.Point(182, 256);
             this.tbx_MK.Name = "tbx_MK";
-            this.tbx_MK.Size = new System.Drawing.Size(226, 30);
+            this.tbx_MK.Size = new System.Drawing.Size(226, 35);
             this.tbx_MK.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.tbx_MK.StateCommon.Border.Rounding = 10;
             this.tbx_MK.StateCommon.Border.Width = 2;
-            this.tbx_MK.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_MK.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_MK.TabIndex = 17;
             // 
             // tbx_TTK
             // 
             this.tbx_TTK.Location = new System.Drawing.Point(182, 212);
             this.tbx_TTK.Name = "tbx_TTK";
-            this.tbx_TTK.Size = new System.Drawing.Size(226, 30);
+            this.tbx_TTK.Size = new System.Drawing.Size(226, 35);
             this.tbx_TTK.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.tbx_TTK.StateCommon.Border.Rounding = 10;
             this.tbx_TTK.StateCommon.Border.Width = 2;
-            this.tbx_TTK.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbx_TTK.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbx_TTK.TabIndex = 16;
             // 
             // btn_Cancel
