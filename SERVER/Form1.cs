@@ -555,6 +555,14 @@ namespace SERVER
                     if (message[message.Length - 1] == "AddChatList")
                     {
                         clientList.Add(client);
+                        foreach (Socket item in clientList)
+                        {
+                            if (item != null)
+                            {
+                                String str = message[0] + " đã lạc vào động bàn tơ";
+                                item.Send(Serialize(str));
+                            }
+                        }
                     }
 
                     if (message[message.Length - 1] == "Chat")
@@ -564,6 +572,18 @@ namespace SERVER
                             if (item != null && item != client)
                             {
                                 item.Send(Serialize(message[0]));
+                            }
+                        }
+                    }
+
+                    if (message[message.Length - 1] == "LeftChat")
+                    {
+                        foreach (Socket item in clientList)
+                        {
+                            if (item != null && item != client)
+                            {
+                                String str = message[0] + " đã chim cút khỏi đây";
+                                item.Send(Serialize(str));
                             }
                         }
                     }

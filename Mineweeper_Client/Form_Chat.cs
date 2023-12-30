@@ -18,12 +18,12 @@ namespace Minesweeper_Client
 {
     public partial class Form_Chat : KryptonForm
     {
-        public static string username;
+        public static string username = "";
         public Form_Chat()
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;//tránh việc đụng độ khi sử dụng tài nguyên giữa các thread
-            Connect();
+            Connect();           
             SendToAddChatList();
         }
 
@@ -77,7 +77,7 @@ namespace Minesweeper_Client
 
         void SendToAddChatList()
         {
-            string str = "AddChatList";
+            string str = username + "-" + "AddChatList";
             client.Send(Serialize(str));
         }
         //nhận dữ liệu
@@ -136,6 +136,20 @@ namespace Minesweeper_Client
         {
             Send();
             AddMessage(tbx_Type.Text);
+        }
+
+        private void Form_Chat_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {           
+            String str = username + "-" + "LeftChat";
+            this.Hide();
+            client.Send(Serialize(str));
+            Thread.Sleep(500);
+            this.Close();
         }
     }
 }

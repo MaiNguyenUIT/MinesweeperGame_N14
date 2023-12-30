@@ -170,13 +170,10 @@ namespace Minesweeper_Client
             this.btn_AddFr.Name = "btn_AddFr";
             this.btn_AddFr.Size = new System.Drawing.Size(55, 45);
             this.btn_AddFr.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
-<<<<<<< HEAD
             this.btn_AddFr.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-=======
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left))));
             this.btn_AddFr.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
->>>>>>> 52663641c57774e4f3f6c521851380ec0259cf40
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_AddFr.StateCommon.Border.Rounding = 15;
             this.btn_AddFr.StateCommon.Border.Width = 3;

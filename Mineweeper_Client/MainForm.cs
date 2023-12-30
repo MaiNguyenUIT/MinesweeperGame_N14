@@ -166,6 +166,7 @@ namespace Minesweeper_Client
                         lbl_ID.Text = message[0].ToString();
                         MineLand.username = lblName.Text;
                         Form_Notification.username = lblName.Text;
+                        Form_Chat.username = lblName.Text;
                     }
                 }
             }
@@ -352,7 +353,6 @@ namespace Minesweeper_Client
         private void picB_Chat_Click(object sender, EventArgs e)
         {
             Form_Chat form = new Form_Chat();
-            Form_Chat.username = lblName.Text;
             form.ShowDialog();
         }
 
