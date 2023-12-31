@@ -46,7 +46,7 @@ namespace Minesweeper_Client
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Minesweeper_Client.Properties.Resources._0af3c9613761d2d2394d99312aeba397;
-            this.pictureBox1.Location = new System.Drawing.Point(255, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(271, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(260, 203);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -59,7 +59,7 @@ namespace Minesweeper_Client
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(114, 248);
+            this.label1.Location = new System.Drawing.Point(114, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 22);
             this.label1.TabIndex = 1;
@@ -71,7 +71,7 @@ namespace Minesweeper_Client
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(178, 295);
+            this.label2.Location = new System.Drawing.Point(178, 308);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 22);
             this.label2.TabIndex = 2;
@@ -110,14 +110,14 @@ namespace Minesweeper_Client
             this.kryptonPanel1.Controls.Add(this.pictureBox1);
             this.kryptonPanel1.Controls.Add(this.label1);
             this.kryptonPanel1.Controls.Add(this.label2);
-            this.kryptonPanel1.Location = new System.Drawing.Point(12, 12);
+            this.kryptonPanel1.Location = new System.Drawing.Point(3, 2);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(773, 426);
+            this.kryptonPanel1.Size = new System.Drawing.Size(795, 446);
             this.kryptonPanel1.TabIndex = 8;
             // 
             // tbx_Gmail
             // 
-            this.tbx_Gmail.Location = new System.Drawing.Point(255, 295);
+            this.tbx_Gmail.Location = new System.Drawing.Point(271, 295);
             this.tbx_Gmail.Name = "tbx_Gmail";
             this.tbx_Gmail.Size = new System.Drawing.Size(260, 35);
             this.tbx_Gmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -130,7 +130,7 @@ namespace Minesweeper_Client
             // 
             // tbx_Account
             // 
-            this.tbx_Account.Location = new System.Drawing.Point(255, 248);
+            this.tbx_Account.Location = new System.Drawing.Point(271, 248);
             this.tbx_Account.Name = "tbx_Account";
             this.tbx_Account.Size = new System.Drawing.Size(260, 35);
             this.tbx_Account.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -143,7 +143,7 @@ namespace Minesweeper_Client
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(420, 373);
+            this.btn_Cancel.Location = new System.Drawing.Point(436, 374);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(95, 45);
             this.btn_Cancel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -158,7 +158,7 @@ namespace Minesweeper_Client
             // 
             // btn_getpass
             // 
-            this.btn_getpass.Location = new System.Drawing.Point(255, 374);
+            this.btn_getpass.Location = new System.Drawing.Point(271, 374);
             this.btn_getpass.Name = "btn_getpass";
             this.btn_getpass.Size = new System.Drawing.Size(155, 45);
             this.btn_getpass.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
