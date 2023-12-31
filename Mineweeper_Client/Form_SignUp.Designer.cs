@@ -107,7 +107,7 @@ namespace Minesweeper_Client
             this.label6.BackColor = System.Drawing.Color.SkyBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(75, 393);
+            this.label6.Location = new System.Drawing.Point(75, 402);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 22);
             this.label6.TabIndex = 10;
@@ -164,7 +164,7 @@ namespace Minesweeper_Client
             "Nữ",
             "Nam",
             "Khác"});
-            this.CB_Sex.Location = new System.Drawing.Point(182, 393);
+            this.CB_Sex.Location = new System.Drawing.Point(182, 391);
             this.CB_Sex.Name = "CB_Sex";
             this.CB_Sex.Size = new System.Drawing.Size(226, 33);
             this.CB_Sex.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -181,7 +181,7 @@ namespace Minesweeper_Client
             // 
             // tbx_Gmail
             // 
-            this.tbx_Gmail.Location = new System.Drawing.Point(182, 352);
+            this.tbx_Gmail.Location = new System.Drawing.Point(182, 339);
             this.tbx_Gmail.Name = "tbx_Gmail";
             this.tbx_Gmail.Size = new System.Drawing.Size(226, 35);
             this.tbx_Gmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -194,7 +194,7 @@ namespace Minesweeper_Client
             // 
             // tbx_HT
             // 
-            this.tbx_HT.Location = new System.Drawing.Point(182, 304);
+            this.tbx_HT.Location = new System.Drawing.Point(182, 291);
             this.tbx_HT.Name = "tbx_HT";
             this.tbx_HT.Size = new System.Drawing.Size(226, 35);
             this.tbx_HT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -207,7 +207,7 @@ namespace Minesweeper_Client
             // 
             // tbx_MK
             // 
-            this.tbx_MK.Location = new System.Drawing.Point(182, 256);
+            this.tbx_MK.Location = new System.Drawing.Point(182, 243);
             this.tbx_MK.Name = "tbx_MK";
             this.tbx_MK.Size = new System.Drawing.Size(226, 35);
             this.tbx_MK.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -220,7 +220,7 @@ namespace Minesweeper_Client
             // 
             // tbx_TTK
             // 
-            this.tbx_TTK.Location = new System.Drawing.Point(182, 212);
+            this.tbx_TTK.Location = new System.Drawing.Point(182, 199);
             this.tbx_TTK.Name = "tbx_TTK";
             this.tbx_TTK.Size = new System.Drawing.Size(226, 35);
             this.tbx_TTK.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
