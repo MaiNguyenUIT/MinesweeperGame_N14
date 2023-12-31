@@ -587,6 +587,28 @@ namespace SERVER
                             }
                         }
                     }
+
+                    if (message[message.Length - 1] == "GetFullInf")
+                    {
+                        string query = "Select id, ingame, hoten, gmail, gioitinh from User_Inf where ingame = '" + message[0] + "'";
+                        sqlCommand = new SqlCommand(query, conn);
+                        sqlDataReader = sqlCommand.ExecuteReader();
+                        if (sqlDataReader.Read())
+                        {
+                            if (sqlDataReader.GetString(1) != null)
+                            {
+                                var id = sqlDataReader.GetInt32(0);
+                                var ig = sqlDataReader.GetString(1);
+                                var ht = sqlDataReader.GetString(2);
+                                var gm = sqlDataReader.GetString(3);
+                                var sex = sqlDataReader.GetString(4);
+                                string str = id + "-" + ig + "-" + ht + "-" + gm + "-" + sex;
+                                client.Send(Serialize(str));
+                                sqlDataReader.Close();
+                            }
+                        }
+                        sqlDataReader.Close();
+                    }
                 }
             }
             catch

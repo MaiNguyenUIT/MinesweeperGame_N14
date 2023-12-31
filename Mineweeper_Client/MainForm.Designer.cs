@@ -29,59 +29,59 @@ namespace Minesweeper_Client
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_ID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnIntermediate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnExpert = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnCustom = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.picbox_Ava = new System.Windows.Forms.PictureBox();
+            this.picB_Signout = new System.Windows.Forms.PictureBox();
             this.btn_AddFr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txt_FindFr = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.picB_notification = new System.Windows.Forms.PictureBox();
+            this.pic_Renew = new System.Windows.Forms.PictureBox();
+            this.picB_Chat = new System.Windows.Forms.PictureBox();
             this.FriendList = new System.Windows.Forms.ListView();
             this.FriendName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FriendMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btn_Reset = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.picB_Setting = new System.Windows.Forms.PictureBox();
+            this.picB_Quest = new System.Windows.Forms.PictureBox();
             this.Player_Detail = new System.Windows.Forms.ListView();
             this.btn_Setting = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_Quest = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.picB_Ranked = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Attemp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Score = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnBeginner = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.picB_Ranked = new System.Windows.Forms.PictureBox();
-            this.pic_Renew = new System.Windows.Forms.PictureBox();
-            this.picB_Chat = new System.Windows.Forms.PictureBox();
-            this.picB_notification = new System.Windows.Forms.PictureBox();
-            this.picbox_Ava = new System.Windows.Forms.PictureBox();
-            this.picB_Signout = new System.Windows.Forms.PictureBox();
-            this.picB_Setting = new System.Windows.Forms.PictureBox();
-            this.picB_Quest = new System.Windows.Forms.PictureBox();
-            this.FriendMode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_Ava)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Signout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_notification)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Renew)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Chat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Setting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Quest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
             this.kryptonPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picB_Ranked)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Renew)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Chat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_notification)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_Ava)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Signout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Setting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Quest)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -109,8 +109,8 @@ namespace Minesweeper_Client
             this.btnIntermediate.Size = new System.Drawing.Size(100, 50);
             this.btnIntermediate.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
             this.btnIntermediate.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
-            this.btnIntermediate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btnIntermediate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnIntermediate.StateCommon.Border.Rounding = 15;
             this.btnIntermediate.StateCommon.Border.Width = 3;
@@ -126,8 +126,8 @@ namespace Minesweeper_Client
             this.btnExpert.Size = new System.Drawing.Size(100, 50);
             this.btnExpert.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
             this.btnExpert.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
-            this.btnExpert.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btnExpert.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnExpert.StateCommon.Border.Rounding = 15;
             this.btnExpert.StateCommon.Border.Width = 3;
@@ -143,8 +143,8 @@ namespace Minesweeper_Client
             this.btnCustom.Size = new System.Drawing.Size(100, 50);
             this.btnCustom.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
             this.btnCustom.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
-            this.btnCustom.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btnCustom.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCustom.StateCommon.Border.Rounding = 15;
             this.btnCustom.StateCommon.Border.Width = 3;
@@ -164,14 +164,38 @@ namespace Minesweeper_Client
             this.kryptonPanel1.Size = new System.Drawing.Size(204, 111);
             this.kryptonPanel1.TabIndex = 8;
             // 
+            // picbox_Ava
+            // 
+            this.picbox_Ava.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.picbox_Ava.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picbox_Ava.BackgroundImage")));
+            this.picbox_Ava.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picbox_Ava.Location = new System.Drawing.Point(4, 3);
+            this.picbox_Ava.Name = "picbox_Ava";
+            this.picbox_Ava.Size = new System.Drawing.Size(63, 62);
+            this.picbox_Ava.TabIndex = 1;
+            this.picbox_Ava.TabStop = false;
+            this.picbox_Ava.Click += new System.EventHandler(this.picbox_Ava_Click);
+            // 
+            // picB_Signout
+            // 
+            this.picB_Signout.BackColor = System.Drawing.Color.Transparent;
+            this.picB_Signout.Image = global::Minesweeper_Client.Properties.Resources.signout_icon;
+            this.picB_Signout.Location = new System.Drawing.Point(156, 61);
+            this.picB_Signout.Name = "picB_Signout";
+            this.picB_Signout.Size = new System.Drawing.Size(45, 47);
+            this.picB_Signout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_Signout.TabIndex = 6;
+            this.picB_Signout.TabStop = false;
+            this.picB_Signout.Click += new System.EventHandler(this.picB_Signout_Click);
+            this.picB_Signout.MouseEnter += new System.EventHandler(this.picB_MouseEnter);
+            this.picB_Signout.MouseLeave += new System.EventHandler(this.picB_MouseLeave);
+            // 
             // btn_AddFr
             // 
             this.btn_AddFr.Location = new System.Drawing.Point(144, 3);
             this.btn_AddFr.Name = "btn_AddFr";
             this.btn_AddFr.Size = new System.Drawing.Size(55, 45);
             this.btn_AddFr.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
-            this.btn_AddFr.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left))));
             this.btn_AddFr.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -205,6 +229,46 @@ namespace Minesweeper_Client
             this.kryptonPanel2.Size = new System.Drawing.Size(204, 327);
             this.kryptonPanel2.TabIndex = 9;
             // 
+            // picB_notification
+            // 
+            this.picB_notification.BackColor = System.Drawing.Color.Transparent;
+            this.picB_notification.Image = global::Minesweeper_Client.Properties.Resources.bell_pic;
+            this.picB_notification.Location = new System.Drawing.Point(73, 52);
+            this.picB_notification.Name = "picB_notification";
+            this.picB_notification.Size = new System.Drawing.Size(44, 41);
+            this.picB_notification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_notification.TabIndex = 8;
+            this.picB_notification.TabStop = false;
+            this.picB_notification.Click += new System.EventHandler(this.picB_notification_Click);
+            this.picB_notification.MouseEnter += new System.EventHandler(this.picB_notification_MouseEnter);
+            this.picB_notification.MouseLeave += new System.EventHandler(this.picB_notification_MouseLeave);
+            // 
+            // pic_Renew
+            // 
+            this.pic_Renew.BackColor = System.Drawing.Color.Transparent;
+            this.pic_Renew.Image = global::Minesweeper_Client.Properties.Resources.reload_icon_16912;
+            this.pic_Renew.Location = new System.Drawing.Point(156, 52);
+            this.pic_Renew.Name = "pic_Renew";
+            this.pic_Renew.Size = new System.Drawing.Size(45, 41);
+            this.pic_Renew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Renew.TabIndex = 9;
+            this.pic_Renew.TabStop = false;
+            this.pic_Renew.Click += new System.EventHandler(this.pic_Renew_Click);
+            // 
+            // picB_Chat
+            // 
+            this.picB_Chat.BackColor = System.Drawing.Color.Transparent;
+            this.picB_Chat.Image = global::Minesweeper_Client.Properties.Resources.chatPic;
+            this.picB_Chat.Location = new System.Drawing.Point(4, 50);
+            this.picB_Chat.Name = "picB_Chat";
+            this.picB_Chat.Size = new System.Drawing.Size(43, 43);
+            this.picB_Chat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_Chat.TabIndex = 7;
+            this.picB_Chat.TabStop = false;
+            this.picB_Chat.Click += new System.EventHandler(this.picB_Chat_Click);
+            this.picB_Chat.MouseEnter += new System.EventHandler(this.picB_Chat_MouseEnter);
+            this.picB_Chat.MouseLeave += new System.EventHandler(this.picB_Chat_MouseLeave);
+            // 
             // FriendList
             // 
             this.FriendList.BackColor = System.Drawing.Color.LightCyan;
@@ -219,19 +283,25 @@ namespace Minesweeper_Client
             this.FriendList.TabIndex = 4;
             this.FriendList.UseCompatibleStateImageBehavior = false;
             this.FriendList.View = System.Windows.Forms.View.Details;
+            this.FriendList.SelectedIndexChanged += new System.EventHandler(this.FriendList_SelectedIndexChanged);
             // 
             // FriendName
             // 
             this.FriendName.Text = "Friend";
             this.FriendName.Width = 105;
             // 
+            // FriendMode
+            // 
+            this.FriendMode.Text = "Mode";
+            this.FriendMode.Width = 40;
+            // 
             // kryptonPalette1
             // 
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
-            this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Border.Rounding = 15;
             this.kryptonPalette1.ButtonStyles.ButtonCommon.StateCommon.Border.Width = 3;
@@ -261,8 +331,8 @@ namespace Minesweeper_Client
             this.btn_Reset.Size = new System.Drawing.Size(67, 55);
             this.btn_Reset.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
             this.btn_Reset.StateCommon.Border.Color2 = System.Drawing.Color.LightGray;
-            this.btn_Reset.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Reset.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Reset.StateCommon.Border.Rounding = 15;
             this.btn_Reset.StateCommon.Border.Width = 3;
@@ -270,6 +340,35 @@ namespace Minesweeper_Client
             this.btn_Reset.TabIndex = 11;
             this.btn_Reset.Values.Text = "Reset";
             this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
+            // 
+            // picB_Setting
+            // 
+            this.picB_Setting.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.picB_Setting.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.picB_Setting.BackgroundImage = global::Minesweeper_Client.Properties.Resources.gearpic;
+            this.picB_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picB_Setting.Enabled = false;
+            this.picB_Setting.Location = new System.Drawing.Point(541, 61);
+            this.picB_Setting.Name = "picB_Setting";
+            this.picB_Setting.Size = new System.Drawing.Size(25, 25);
+            this.picB_Setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_Setting.TabIndex = 2;
+            this.picB_Setting.TabStop = false;
+            // 
+            // picB_Quest
+            // 
+            this.picB_Quest.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.picB_Quest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.picB_Quest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picB_Quest.Enabled = false;
+            this.picB_Quest.Image = global::Minesweeper_Client.Properties.Resources.questpic;
+            this.picB_Quest.Location = new System.Drawing.Point(541, 14);
+            this.picB_Quest.Name = "picB_Quest";
+            this.picB_Quest.Size = new System.Drawing.Size(25, 25);
+            this.picB_Quest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_Quest.TabIndex = 4;
+            this.picB_Quest.TabStop = false;
+            this.picB_Quest.Click += new System.EventHandler(this.btn_Quest_Click);
             // 
             // Player_Detail
             // 
@@ -292,8 +391,8 @@ namespace Minesweeper_Client
             this.btn_Setting.StateCommon.Back.Image = global::Minesweeper_Client.Properties.Resources.gearpic;
             this.btn_Setting.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
             this.btn_Setting.StateCommon.Border.Color2 = System.Drawing.Color.DimGray;
-            this.btn_Setting.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Setting.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Setting.StateCommon.Border.Rounding = 15;
             this.btn_Setting.StateCommon.Border.Width = 3;
@@ -312,8 +411,8 @@ namespace Minesweeper_Client
             this.btn_Quest.Size = new System.Drawing.Size(45, 45);
             this.btn_Quest.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
             this.btn_Quest.StateCommon.Border.Color2 = System.Drawing.Color.DimGray;
-            this.btn_Quest.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Quest.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Quest.StateCommon.Border.Rounding = 15;
             this.btn_Quest.StateCommon.Border.Width = 3;
@@ -337,6 +436,20 @@ namespace Minesweeper_Client
             this.kryptonPanel4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonPanel4.Size = new System.Drawing.Size(581, 327);
             this.kryptonPanel4.TabIndex = 11;
+            // 
+            // picB_Ranked
+            // 
+            this.picB_Ranked.BackColor = System.Drawing.Color.Transparent;
+            this.picB_Ranked.Image = global::Minesweeper_Client.Properties.Resources.rankedPic;
+            this.picB_Ranked.Location = new System.Drawing.Point(508, 261);
+            this.picB_Ranked.Name = "picB_Ranked";
+            this.picB_Ranked.Size = new System.Drawing.Size(67, 50);
+            this.picB_Ranked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picB_Ranked.TabIndex = 7;
+            this.picB_Ranked.TabStop = false;
+            this.picB_Ranked.Click += new System.EventHandler(this.picB_Ranked_Click);
+            this.picB_Ranked.MouseEnter += new System.EventHandler(this.picB_Ranked_MouseEnter);
+            this.picB_Ranked.MouseLeave += new System.EventHandler(this.picB_Ranked_MouseLeave);
             // 
             // listView1
             // 
@@ -380,8 +493,8 @@ namespace Minesweeper_Client
             this.btnBeginner.Name = "btnBeginner";
             this.btnBeginner.Size = new System.Drawing.Size(100, 50);
             this.btnBeginner.StateCommon.Border.Color1 = System.Drawing.Color.DimGray;
-            this.btnBeginner.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btnBeginner.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnBeginner.StateCommon.Border.Rounding = 15;
             this.btnBeginner.StateCommon.Border.Width = 3;
@@ -389,119 +502,6 @@ namespace Minesweeper_Client
             this.btnBeginner.TabIndex = 9;
             this.btnBeginner.Values.Text = "Beginner\r\n10x10";
             this.btnBeginner.Click += new System.EventHandler(this.btnBeginner_Click);
-            // 
-            // picB_Ranked
-            // 
-            this.picB_Ranked.BackColor = System.Drawing.Color.Transparent;
-            this.picB_Ranked.Image = global::Minesweeper_Client.Properties.Resources.rankedPic;
-            this.picB_Ranked.Location = new System.Drawing.Point(508, 261);
-            this.picB_Ranked.Name = "picB_Ranked";
-            this.picB_Ranked.Size = new System.Drawing.Size(67, 50);
-            this.picB_Ranked.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picB_Ranked.TabIndex = 7;
-            this.picB_Ranked.TabStop = false;
-            this.picB_Ranked.Click += new System.EventHandler(this.picB_Ranked_Click);
-            this.picB_Ranked.MouseEnter += new System.EventHandler(this.picB_Ranked_MouseEnter);
-            this.picB_Ranked.MouseLeave += new System.EventHandler(this.picB_Ranked_MouseLeave);
-            // 
-            // pic_Renew
-            // 
-            this.pic_Renew.BackColor = System.Drawing.Color.Transparent;
-            this.pic_Renew.Image = global::Minesweeper_Client.Properties.Resources.reload_icon_16912;
-            this.pic_Renew.Location = new System.Drawing.Point(156, 52);
-            this.pic_Renew.Name = "pic_Renew";
-            this.pic_Renew.Size = new System.Drawing.Size(45, 41);
-            this.pic_Renew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_Renew.TabIndex = 9;
-            this.pic_Renew.TabStop = false;
-            this.pic_Renew.Click += new System.EventHandler(this.pic_Renew_Click);
-            // 
-            // picB_Chat
-            // 
-            this.picB_Chat.BackColor = System.Drawing.Color.Transparent;
-            this.picB_Chat.Image = global::Minesweeper_Client.Properties.Resources.chatPic;
-            this.picB_Chat.Location = new System.Drawing.Point(4, 50);
-            this.picB_Chat.Name = "picB_Chat";
-            this.picB_Chat.Size = new System.Drawing.Size(43, 43);
-            this.picB_Chat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picB_Chat.TabIndex = 7;
-            this.picB_Chat.TabStop = false;
-            this.picB_Chat.Click += new System.EventHandler(this.picB_Chat_Click);
-            this.picB_Chat.MouseEnter += new System.EventHandler(this.picB_Chat_MouseEnter);
-            this.picB_Chat.MouseLeave += new System.EventHandler(this.picB_Chat_MouseLeave);
-            // 
-            // picB_notification
-            // 
-            this.picB_notification.BackColor = System.Drawing.Color.Transparent;
-            this.picB_notification.Image = global::Minesweeper_Client.Properties.Resources.bell_pic;
-            this.picB_notification.Location = new System.Drawing.Point(73, 52);
-            this.picB_notification.Name = "picB_notification";
-            this.picB_notification.Size = new System.Drawing.Size(44, 41);
-            this.picB_notification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picB_notification.TabIndex = 8;
-            this.picB_notification.TabStop = false;
-            this.picB_notification.Click += new System.EventHandler(this.picB_notification_Click);
-            this.picB_notification.MouseEnter += new System.EventHandler(this.picB_notification_MouseEnter);
-            this.picB_notification.MouseLeave += new System.EventHandler(this.picB_notification_MouseLeave);
-            // 
-            // picbox_Ava
-            // 
-            this.picbox_Ava.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.picbox_Ava.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picbox_Ava.BackgroundImage")));
-            this.picbox_Ava.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picbox_Ava.Location = new System.Drawing.Point(4, 3);
-            this.picbox_Ava.Name = "picbox_Ava";
-            this.picbox_Ava.Size = new System.Drawing.Size(63, 62);
-            this.picbox_Ava.TabIndex = 1;
-            this.picbox_Ava.TabStop = false;
-            // 
-            // picB_Signout
-            // 
-            this.picB_Signout.BackColor = System.Drawing.Color.Transparent;
-            this.picB_Signout.Image = global::Minesweeper_Client.Properties.Resources.signout_icon;
-            this.picB_Signout.Location = new System.Drawing.Point(156, 61);
-            this.picB_Signout.Name = "picB_Signout";
-            this.picB_Signout.Size = new System.Drawing.Size(45, 47);
-            this.picB_Signout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picB_Signout.TabIndex = 6;
-            this.picB_Signout.TabStop = false;
-            this.picB_Signout.Click += new System.EventHandler(this.picB_Signout_Click);
-            this.picB_Signout.MouseEnter += new System.EventHandler(this.picB_MouseEnter);
-            this.picB_Signout.MouseLeave += new System.EventHandler(this.picB_MouseLeave);
-            // 
-            // picB_Setting
-            // 
-            this.picB_Setting.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.picB_Setting.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.picB_Setting.BackgroundImage = global::Minesweeper_Client.Properties.Resources.gearpic;
-            this.picB_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picB_Setting.Enabled = false;
-            this.picB_Setting.Location = new System.Drawing.Point(541, 61);
-            this.picB_Setting.Name = "picB_Setting";
-            this.picB_Setting.Size = new System.Drawing.Size(25, 25);
-            this.picB_Setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picB_Setting.TabIndex = 2;
-            this.picB_Setting.TabStop = false;
-            // 
-            // picB_Quest
-            // 
-            this.picB_Quest.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.picB_Quest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.picB_Quest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picB_Quest.Enabled = false;
-            this.picB_Quest.Image = global::Minesweeper_Client.Properties.Resources.questpic;
-            this.picB_Quest.Location = new System.Drawing.Point(541, 14);
-            this.picB_Quest.Name = "picB_Quest";
-            this.picB_Quest.Size = new System.Drawing.Size(25, 25);
-            this.picB_Quest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picB_Quest.TabIndex = 4;
-            this.picB_Quest.TabStop = false;
-            this.picB_Quest.Click += new System.EventHandler(this.btn_Quest_Click);
-            // 
-            // FriendMode
-            // 
-            this.FriendMode.Text = "Mode";
-            this.FriendMode.Width = 40;
             // 
             // MainForm
             // 
@@ -518,21 +518,21 @@ namespace Minesweeper_Client
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_Ava)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Signout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_notification)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Renew)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Chat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Setting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picB_Quest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
             this.kryptonPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picB_Ranked)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Renew)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Chat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_notification)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_Ava)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Signout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Setting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picB_Quest)).EndInit();
             this.ResumeLayout(false);
 
         }

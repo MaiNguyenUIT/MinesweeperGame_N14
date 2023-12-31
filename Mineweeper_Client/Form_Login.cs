@@ -30,11 +30,11 @@ namespace Minesweeper_Client
 
         IPEndPoint IP;
         Socket client;
-
+        GetIPv4 GetIPv4 = new GetIPv4();        
         //kết nối đến server
         void Connect()
         {
-            //IP là địa chỉ của server.Khởi tạo địa chỉ IP và socket để kết nối
+            //IP là địa chỉ của server.Khởi tạo địa chỉ IP và socket để kết nối                      
             IP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1997);
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
             //bắt đầu kết nôi. Nếu ko kết nối được thì hiện thông báo

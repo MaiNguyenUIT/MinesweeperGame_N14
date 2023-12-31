@@ -13,6 +13,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using System.Xml.Linq;
+
 namespace Minesweeper_Client
 {
     public partial class MainForm : KryptonForm
@@ -368,6 +370,25 @@ namespace Minesweeper_Client
             Connect();
             FriendList.Items.Clear();
             SendToGetFriend();
+        }
+
+        private void picbox_Ava_Click(object sender, EventArgs e)
+        {
+            Form_Information.username = lblName.Text;
+            Form_Information form_Information = new Form_Information();
+            form_Information.ShowDialog();
+        }
+
+        private void FriendList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ListView.SelectedListViewItemCollection item;
+            item = FriendList.SelectedItems;
+            if (item.Count > 0)
+            {
+                Form_Information.username = item[0].Text;
+                Form_Information form_Information = new Form_Information();
+                form_Information.ShowDialog();
+            }
         }
     }
 }

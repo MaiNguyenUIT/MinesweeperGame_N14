@@ -1,4 +1,4 @@
-namespace Minesweeper_Client
+﻿namespace Minesweeper_Client
 {
     partial class Form_Information
     {
@@ -30,11 +30,6 @@ namespace Minesweeper_Client
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tbx_Ingame = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.tbx_Sex = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.tbx_Gmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.tbx_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.tbx_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lbl_ingame = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_Sex = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl_Gmail = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -42,6 +37,11 @@ namespace Minesweeper_Client
             this.lbl_ID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lb_ID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lb_Ingame = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lb_Name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lb_Mail = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lb_Sex = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,12 +52,12 @@ namespace Minesweeper_Client
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.lb_Sex);
+            this.kryptonPanel1.Controls.Add(this.lb_Mail);
+            this.kryptonPanel1.Controls.Add(this.lb_Name);
+            this.kryptonPanel1.Controls.Add(this.lb_Ingame);
+            this.kryptonPanel1.Controls.Add(this.lb_ID);
             this.kryptonPanel1.Controls.Add(this.pictureBox1);
-            this.kryptonPanel1.Controls.Add(this.tbx_Ingame);
-            this.kryptonPanel1.Controls.Add(this.tbx_Sex);
-            this.kryptonPanel1.Controls.Add(this.tbx_Gmail);
-            this.kryptonPanel1.Controls.Add(this.tbx_Name);
-            this.kryptonPanel1.Controls.Add(this.tbx_ID);
             this.kryptonPanel1.Controls.Add(this.lbl_ingame);
             this.kryptonPanel1.Controls.Add(this.lbl_Sex);
             this.kryptonPanel1.Controls.Add(this.lbl_Gmail);
@@ -71,7 +71,7 @@ namespace Minesweeper_Client
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Minesweeper_Client.Properties.Resources.newnamegif;
+            this.pictureBox1.Image = global::Minesweeper_Client.Properties.Resources.user_icon_150670;
             this.pictureBox1.Location = new System.Drawing.Point(89, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(198, 128);
@@ -79,79 +79,9 @@ namespace Minesweeper_Client
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // tbx_Ingame
-            // 
-            this.tbx_Ingame.Location = new System.Drawing.Point(100, 372);
-            this.tbx_Ingame.Name = "tbx_Ingame";
-            this.tbx_Ingame.ReadOnly = true;
-            this.tbx_Ingame.Size = new System.Drawing.Size(187, 33);
-            this.tbx_Ingame.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.tbx_Ingame.StateCommon.Border.Rounding = 10;
-            this.tbx_Ingame.StateCommon.Border.Width = 1;
-            this.tbx_Ingame.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Ingame.TabIndex = 9;
-            // 
-            // tbx_Sex
-            // 
-            this.tbx_Sex.Location = new System.Drawing.Point(100, 323);
-            this.tbx_Sex.Name = "tbx_Sex";
-            this.tbx_Sex.ReadOnly = true;
-            this.tbx_Sex.Size = new System.Drawing.Size(187, 33);
-            this.tbx_Sex.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.tbx_Sex.StateCommon.Border.Rounding = 10;
-            this.tbx_Sex.StateCommon.Border.Width = 1;
-            this.tbx_Sex.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Sex.TabIndex = 8;
-            // 
-            // tbx_Gmail
-            // 
-            this.tbx_Gmail.Location = new System.Drawing.Point(100, 268);
-            this.tbx_Gmail.Name = "tbx_Gmail";
-            this.tbx_Gmail.ReadOnly = true;
-            this.tbx_Gmail.Size = new System.Drawing.Size(187, 33);
-            this.tbx_Gmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.tbx_Gmail.StateCommon.Border.Rounding = 10;
-            this.tbx_Gmail.StateCommon.Border.Width = 1;
-            this.tbx_Gmail.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Gmail.TabIndex = 7;
-            // 
-            // tbx_Name
-            // 
-            this.tbx_Name.Location = new System.Drawing.Point(100, 208);
-            this.tbx_Name.Name = "tbx_Name";
-            this.tbx_Name.ReadOnly = true;
-            this.tbx_Name.Size = new System.Drawing.Size(187, 33);
-            this.tbx_Name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.tbx_Name.StateCommon.Border.Rounding = 10;
-            this.tbx_Name.StateCommon.Border.Width = 1;
-            this.tbx_Name.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_Name.TabIndex = 6;
-            // 
-            // tbx_ID
-            // 
-            this.tbx_ID.Location = new System.Drawing.Point(100, 145);
-            this.tbx_ID.Name = "tbx_ID";
-            this.tbx_ID.ReadOnly = true;
-            this.tbx_ID.Size = new System.Drawing.Size(187, 33);
-            this.tbx_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.tbx_ID.StateCommon.Border.Rounding = 10;
-            this.tbx_ID.StateCommon.Border.Width = 1;
-            this.tbx_ID.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_ID.TabIndex = 5;
-            // 
             // lbl_ingame
             // 
-            this.lbl_ingame.Location = new System.Drawing.Point(7, 381);
+            this.lbl_ingame.Location = new System.Drawing.Point(7, 208);
             this.lbl_ingame.Name = "lbl_ingame";
             this.lbl_ingame.Size = new System.Drawing.Size(78, 24);
             this.lbl_ingame.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,7 +90,7 @@ namespace Minesweeper_Client
             // 
             // lbl_Sex
             // 
-            this.lbl_Sex.Location = new System.Drawing.Point(36, 332);
+            this.lbl_Sex.Location = new System.Drawing.Point(36, 381);
             this.lbl_Sex.Name = "lbl_Sex";
             this.lbl_Sex.Size = new System.Drawing.Size(49, 24);
             this.lbl_Sex.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,7 +99,7 @@ namespace Minesweeper_Client
             // 
             // lbl_Gmail
             // 
-            this.lbl_Gmail.Location = new System.Drawing.Point(20, 277);
+            this.lbl_Gmail.Location = new System.Drawing.Point(20, 327);
             this.lbl_Gmail.Name = "lbl_Gmail";
             this.lbl_Gmail.Size = new System.Drawing.Size(65, 24);
             this.lbl_Gmail.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,7 +108,7 @@ namespace Minesweeper_Client
             // 
             // lbl_Name
             // 
-            this.lbl_Name.Location = new System.Drawing.Point(20, 217);
+            this.lbl_Name.Location = new System.Drawing.Point(20, 268);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(65, 24);
             this.lbl_Name.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,6 +144,46 @@ namespace Minesweeper_Client
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // lb_ID
+            // 
+            this.lb_ID.Location = new System.Drawing.Point(106, 154);
+            this.lb_ID.Name = "lb_ID";
+            this.lb_ID.Size = new System.Drawing.Size(109, 24);
+            this.lb_ID.TabIndex = 11;
+            this.lb_ID.Values.Text = "kryptonLabel1";
+            // 
+            // lb_Ingame
+            // 
+            this.lb_Ingame.Location = new System.Drawing.Point(106, 208);
+            this.lb_Ingame.Name = "lb_Ingame";
+            this.lb_Ingame.Size = new System.Drawing.Size(109, 24);
+            this.lb_Ingame.TabIndex = 12;
+            this.lb_Ingame.Values.Text = "kryptonLabel1";
+            // 
+            // lb_Name
+            // 
+            this.lb_Name.Location = new System.Drawing.Point(106, 268);
+            this.lb_Name.Name = "lb_Name";
+            this.lb_Name.Size = new System.Drawing.Size(109, 24);
+            this.lb_Name.TabIndex = 13;
+            this.lb_Name.Values.Text = "kryptonLabel1";
+            // 
+            // lb_Mail
+            // 
+            this.lb_Mail.Location = new System.Drawing.Point(106, 327);
+            this.lb_Mail.Name = "lb_Mail";
+            this.lb_Mail.Size = new System.Drawing.Size(109, 24);
+            this.lb_Mail.TabIndex = 14;
+            this.lb_Mail.Values.Text = "kryptonLabel1";
+            // 
+            // lb_Sex
+            // 
+            this.lb_Sex.Location = new System.Drawing.Point(106, 381);
+            this.lb_Sex.Name = "lb_Sex";
+            this.lb_Sex.Size = new System.Drawing.Size(109, 24);
+            this.lb_Sex.TabIndex = 15;
+            this.lb_Sex.Values.Text = "kryptonLabel1";
+            // 
             // Form_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,12 +192,8 @@ namespace Minesweeper_Client
             this.Controls.Add(this.kryptonPanel2);
             this.Controls.Add(this.kryptonPanel1);
             this.Name = "Form_Information";
-            this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateCommon.Border.Rounding = 20;
-            this.StateCommon.Border.Width = 2;
             this.Text = "Form_Information";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDangNhap_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -243,17 +209,17 @@ namespace Minesweeper_Client
 
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_ID;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tbx_ID;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_ingame;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Sex;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Gmail;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Name;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tbx_Ingame;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tbx_Sex;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tbx_Gmail;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tbx_Name;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lb_Sex;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lb_Mail;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lb_Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lb_Ingame;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lb_ID;
     }
 }
