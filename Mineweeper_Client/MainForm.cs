@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +41,7 @@ namespace Minesweeper_Client
         }
 
         IPEndPoint IP;
-        Socket client;      
+        Socket client;
 
         //kết nối đến server
         void Connect()
@@ -104,17 +104,17 @@ namespace Minesweeper_Client
 
         void SendToGetFriend()
         {
-            Connect();
+            //Connect();
             String str = lblName.Text + "-" + "GetFr";
             client.Send(Serialize(str));
         }
-        
+
 
         void InsertDataIntoListView(string str)
         {
             string[] message;
             message = str.Split('-');
-            for(int i = 0; i < message.Length; i = i + 4)
+            for (int i = 0; i < message.Length; i = i + 4)
             {
                 ListViewItem listViewItem = new ListViewItem(message[i]);
                 listViewItem.SubItems.Add(message[i + 1]);
@@ -220,18 +220,18 @@ namespace Minesweeper_Client
                "Chọn cẩn thận: Hãy chọn cẩn thận khi mở các ô, dựa trên thông tin về số trên ô xung quanh để xác định liệu có mìn trong các ô lân cận hay không.\r\n\r\n" +
                "Winning: Bạn chiến thắng khi tất cả các ô không chứa mìn đều được mở.";
             string captionstr = "The rule of Minesweeper";
-            MessageBox.Show(rulestr,captionstr, MessageBoxButtons.OK, MessageBoxIcon.Question);
-            
+            MessageBox.Show(rulestr, captionstr, MessageBoxButtons.OK, MessageBoxIcon.Question);
+
         }
         private void btn_Setting_Click(object sender, EventArgs e)
         {
             Form_Setting formSetting = new Form_Setting();
             formSetting.ShowDialog();
-            
+
         }
         private void picB_MouseEnter(object sender, EventArgs e)
         {
-             picB_Signout.BackColor = Color.LightGoldenrodYellow;
+            picB_Signout.BackColor = Color.LightGoldenrodYellow;
         }
 
         private void picB_MouseLeave(object sender, EventArgs e)
@@ -242,11 +242,11 @@ namespace Minesweeper_Client
         private void btnBeginner_Click(object sender, EventArgs e)
         {
             MineLand mineland = new MineLand();
-            mineland.beginnerToolStripMenuItem_Click(sender,e);
+            mineland.beginnerToolStripMenuItem_Click(sender, e);
             mineland.ShowDialog();
         }
 
-        
+
 
         private void btnIntermediate_Click(object sender, EventArgs e)
         {
@@ -322,7 +322,7 @@ namespace Minesweeper_Client
 
         private void picB_Ranked_MouseLeave(object sender, EventArgs e)
         {
-            picB_Ranked.BackColor= Color.Transparent;
+            picB_Ranked.BackColor = Color.Transparent;
         }
 
         private void picB_notification_MouseEnter(object sender, EventArgs e)
@@ -389,6 +389,26 @@ namespace Minesweeper_Client
                 Form_Information form_Information = new Form_Information();
                 form_Information.ShowDialog();
             }
+        }
+
+        private void pic_Renew_MouseEnter(object sender, EventArgs e)
+        {
+            pic_Renew.BackColor = Color.PaleGoldenrod;
+        }
+
+        private void pic_Renew_MouseLeave(object sender, EventArgs e)
+        {
+            pic_Renew.BackColor = Color.Transparent;
+        }
+
+        private void picbox_Ava_MouseEnter(object sender, EventArgs e)
+        {
+            picbox_Ava.BackColor = Color.PaleGoldenrod;
+        }
+
+        private void picbox_Ava_MouseLeave(object sender, EventArgs e)
+        {
+            picbox_Ava.BackColor = Color.Transparent;
         }
     }
 }
