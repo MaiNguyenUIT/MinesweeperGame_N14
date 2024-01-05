@@ -367,7 +367,6 @@ namespace Minesweeper_Client
 
         private void pic_Renew_Click(object sender, EventArgs e)
         {
-            Connect();
             FriendList.Items.Clear();
             SendToGetFriend();
         }

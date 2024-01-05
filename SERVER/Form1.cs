@@ -146,7 +146,7 @@ namespace SERVER
                         string HoTen = message[2];
                         string Gmail = message[3];
                         string GioiTinh = message[4];
-                        string query = "Select * from User_Inf where taikhoan = '" + TK + "'";
+                        string query = "Select * from User_Inf where Username = '" + TK + "'";
 
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
@@ -160,30 +160,42 @@ namespace SERVER
                             }
                         }
                         sqlDataReader.Close();
-                        string query_1 = @"Insert into User_Inf values ( '" + STT + "','" + message[0] + "','" + message[1] + "','" + message[3] + "','" + message[2] + "','" + message[4] + "','" + "none" + "','" + "off" + "')";
-                        
+                        string query_1 = @"Insert into User_Inf values ( '" + STT + "','" + message[0] + "','" + message[1] + "','" + message[3] + "','" + message[2] + "','" + message[4] + "')";
+                        string query_2 = @"Insert into User_Ingame values ( '" + STT + "','" + message[0] + "','"  + "none" + "','" + "off" + "')";
                         SqlCommand sqlCommand1 = new SqlCommand(query_1, conn);
+                        SqlCommand sqlCommand2 = new SqlCommand(query_2, conn);
                         sqlCommand1.ExecuteNonQuery();
+                        sqlCommand2.ExecuteNonQuery();
                         client.Send(Serialize("Thanh cong"));
                     }
 
                     if (message[message.Length - 1] == "Dang Nhap")
                     {
-                        string query = "Select * from User_Inf where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "'";
+                        string query = "Select * from User_Inf where Username = '" + message[0] + "' and Password = '" + message[1] + "'";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         if (sqlDataReader.Read())
                         {
                             if (sqlDataReader.GetString(1) != null)
-                            {                               
-                                if (String.Compare(sqlDataReader.GetString(7), "on", false) == 0)
-                                {
-                                    client.Send(Serialize("4"));
-                                    sqlDataReader.Close();
-                                    return;
-                                }
+                            {
                                 sqlDataReader.Close();
-                                string query_ig = "Select * from User_Inf where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "' and ingame = 'none'";
+
+                                string query_1 = "Select * from User_Ingame where Username = '" + message[0] + "'";
+                                SqlCommand sqlCommand3 = new SqlCommand(query_1, conn);
+                                SqlDataReader sqlDataReader2;
+                                sqlDataReader2 = sqlCommand3.ExecuteReader();
+                                if(sqlDataReader2.Read())
+                                {
+                                    if (String.Compare(sqlDataReader2.GetString(3), "on", false) == 0)
+                                    {
+                                        client.Send(Serialize("4"));
+                                        sqlDataReader.Close();
+                                        return;
+                                    }
+                                }
+                                sqlDataReader2.Close();
+
+                                string query_ig = "Select * from User_Ingame where Username = '" + message[0] + "' and Ingame = 'none'";
                                 SqlCommand sqlCommand1 = new SqlCommand(query_ig, conn);
                                 SqlDataReader sqlDataReader1;
                                 sqlDataReader1 = sqlCommand1.ExecuteReader();
@@ -197,8 +209,9 @@ namespace SERVER
                                     }                                   
                                 }
                                 sqlDataReader1.Close();
-                                string query_1 = "Update User_Inf set mode = '" + "on" + "' where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "'";
-                                SqlCommand sqlCommand2 = new SqlCommand(query_1, conn);
+
+                                string query_2 = "Update User_Ingame set mode = '" + "on" + "' where Username = '" + message[0] + "'";
+                                SqlCommand sqlCommand2 = new SqlCommand(query_2, conn);
                                 sqlCommand2.ExecuteNonQuery();
                                 client.Send(Serialize("1"));
                             }
@@ -212,7 +225,7 @@ namespace SERVER
 
                     if (message[message.Length - 1] == "Quen mat khau")
                     {
-                        string query = "Select * from User_Inf where taikhoan = '" + message[0] + "' and gmail = '" + message[1] + "'";
+                        string query = "Select * from User_Inf where Username = '" + message[0] + "' and Gmail = '" + message[1] + "'";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         while (sqlDataReader.Read())
@@ -226,14 +239,14 @@ namespace SERVER
                         sqlDataReader.Close();
                         string newPass = HamTaoChuoi();
                         client.Send(Serialize(newPass + "-" + "Lay mat khau thanh cong"));
-                        string query_1 = "Update User_Inf set matkhau = '" + newPass + "' where taikhoan = '" + message[0] + "' and gmail = '" + message[1] + "'";
+                        string query_1 = "Update User_Inf set Password = '" + newPass + "' where Username = '" + message[0] + "' and Gmail = '" + message[1] + "'";
                         SqlCommand sqlCommand1 = new SqlCommand(query_1, conn);
                         sqlCommand1.ExecuteNonQuery();                        
                     }
 
                     if (message[message.Length - 1] == "Tao ingame")
                     {
-                        string query = "Select * from User_Inf where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "' and ingame = '" + message[2] + "'";
+                        string query = "Select * from User_Ingame where Username = '" + message[0] + "' and ingame = '" + message[2] + "'";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         if (sqlDataReader.Read())
@@ -245,7 +258,7 @@ namespace SERVER
                             }
                         }
                         sqlDataReader.Close();                       
-                        string query_1 = "Update User_Inf set ingame = '" + message[2] + "' where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "'";
+                        string query_1 = "Update User_Ingame set Ingame = '" + message[2] + "' where Username = '" + message[0]  + "'";
                         SqlCommand sqlCommand1 = new SqlCommand(query_1, conn);
                         sqlCommand1.ExecuteNonQuery();
                         client.Send(Serialize("Tao ingame thanh cong"));
@@ -254,14 +267,14 @@ namespace SERVER
                     if (message[message.Length - 1] == "Doi MK")
                     {
                         client.Send(Serialize("Doi mat khau thanh cong"));
-                        string query_1 = "Update User_Inf set matkhau = '" + message[2] + "' where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "'";
+                        string query_1 = "Update User_Inf set Password = '" + message[2] + "' where Username = '" + message[0] + "' and Password = '" + message[1] + "'";
                         SqlCommand sqlCommand1 = new SqlCommand(query_1, conn);
                         sqlCommand1.ExecuteNonQuery();
                     }
 
                     if (message[message.Length - 1] == "GetInf")
                     {
-                        string query = "Select id, ingame from User_Inf where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "'";
+                        string query = "Select id, ingame from User_Ingame where Username = '" + message[0] + "'";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         if (sqlDataReader.Read())
@@ -280,7 +293,7 @@ namespace SERVER
 
                     if(message[message.Length - 1] == "Close")
                     {
-                        string query_1 = "Update User_Inf set mode = '" + "off" + "' where taikhoan = '" + message[0] + "' and matkhau = '" + message[1] + "'";
+                        string query_1 = "Update User_Ingame set mode = '" + "off" + "' where Username = '" + message[0]  + "'";
                         SqlCommand sqlCommand1 = new SqlCommand(query_1, conn);
                         sqlCommand1.ExecuteNonQuery();
                     }
@@ -444,7 +457,7 @@ namespace SERVER
 
                     if (message[message.Length - 1] == "Addfr")
                     {
-                        string query = "Select id from User_Inf where ingame = '" + message[1] + "'";
+                        string query = "Select id from User_Ingame where Ingame = '" + message[1] + "'";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         bool is_null = true;
@@ -527,7 +540,7 @@ namespace SERVER
                         List<string> username_fr = new List<string>();
                         List<string> mode_fr = new List<string>();
                         String str = "";
-                        string query = "select ingame, mode from User_Inf where ingame in ( select distinct username_fr from User_Friend where username = '" + message[0] + "' and status = 'done')";
+                        string query = "select ingame, mode from User_Ingame where ingame in ( select distinct username_fr from User_Friend where username = '" + message[0] + "' and status = 'done')";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         while (sqlDataReader.Read())
@@ -559,7 +572,7 @@ namespace SERVER
                         {
                             if (item != null)
                             {
-                                String str = message[0] + " đã lạc vào động bàn tơ";
+                                String str = message[0] + " đã tham gia vào cuộc trò chuyện";
                                 item.Send(Serialize(str));
                             }
                         }
@@ -582,7 +595,7 @@ namespace SERVER
                         {
                             if (item != null && item != client)
                             {
-                                String str = message[0] + " đã chim cút khỏi đây";
+                                String str = message[0] + " đã rời khỏi cuộc trò chuyện";
                                 item.Send(Serialize(str));
                             }
                         }
@@ -590,7 +603,7 @@ namespace SERVER
 
                     if (message[message.Length - 1] == "GetFullInf")
                     {
-                        string query = "Select id, ingame, hoten, gmail, gioitinh from User_Inf where ingame = '" + message[0] + "'";
+                        string query = "Select User_Inf.id, User_Ingame.ingame, Name, Gmail, Sex from User_Inf inner join User_Ingame on User_Inf.Username = User_Ingame.Username where User_Ingame.ingame = '" + message[0] + "'";
                         sqlCommand = new SqlCommand(query, conn);
                         sqlDataReader = sqlCommand.ExecuteReader();
                         if (sqlDataReader.Read())

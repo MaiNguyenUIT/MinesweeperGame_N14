@@ -147,7 +147,6 @@ namespace Minesweeper_Client
         private void btn_Login_Click(object sender, EventArgs e)
         {           
             Send();
-            Connect();
             Form_PasswordChanged.tk = tbx_Account.Text;
             Form_PasswordChanged.mk = tbx_Password.Text;
             Form_CreateGameCharacter.taikhoan = tbx_Account.Text;
