@@ -30,7 +30,7 @@ namespace Minesweeper_Client
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -175,6 +175,8 @@ namespace Minesweeper_Client
             this.picbox_Ava.TabIndex = 1;
             this.picbox_Ava.TabStop = false;
             this.picbox_Ava.Click += new System.EventHandler(this.picbox_Ava_Click);
+            this.picbox_Ava.MouseEnter += new System.EventHandler(this.picbox_Ava_MouseEnter);
+            this.picbox_Ava.MouseLeave += new System.EventHandler(this.picbox_Ava_MouseLeave);
             // 
             // picB_Signout
             // 
@@ -254,6 +256,8 @@ namespace Minesweeper_Client
             this.pic_Renew.TabIndex = 9;
             this.pic_Renew.TabStop = false;
             this.pic_Renew.Click += new System.EventHandler(this.pic_Renew_Click);
+            this.pic_Renew.MouseEnter += new System.EventHandler(this.pic_Renew_MouseEnter);
+            this.pic_Renew.MouseLeave += new System.EventHandler(this.pic_Renew_MouseLeave);
             // 
             // picB_Chat
             // 
@@ -375,7 +379,7 @@ namespace Minesweeper_Client
             this.Player_Detail.BackColor = System.Drawing.Color.LightCyan;
             this.Player_Detail.HideSelection = false;
             this.Player_Detail.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.Player_Detail.Location = new System.Drawing.Point(9, 14);
             this.Player_Detail.Name = "Player_Detail";
             this.Player_Detail.Size = new System.Drawing.Size(442, 81);
